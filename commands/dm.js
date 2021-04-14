@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 module.exports = {
     name: 'directmessage',
-    discription: 'Direct Message a user through Cindy!',
+    discription: 'Direct Message a user through the bot!',
     usage: '[PREFIX]dm <USER_ID>|| [PREFIX]dm @badRyuk#0001',
     aliases: ['dm', 'pm', 'privatemessage'],
     cooldown: 20,
@@ -20,7 +20,7 @@ module.exports = {
         nomember.setDescription('No User Mention/ID Provided')
         nomember.addField('You need to mention a user or add a user id of the user you want to direct message!', 'Please provide a user to direct message and try again! If you provided one make sure it\'s the correct user')
         nomember.setAuthor(message.author.tag, message.author.displayAvatarURL())
-        nomember.setFooter('Thanks for using Cindy!', message.author.displayAvatarURL())
+        nomember.setFooter('Thanks for using Anime Cafe Bot!', message.author.displayAvatarURL())
 
         if (!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send(noperm)
 
@@ -33,7 +33,7 @@ module.exports = {
         themessage.setTitle('Direct Message')
         themessage.setDescription(`You recieved a Message from ${message.guild}!`)
         themessage.addField(reason, `This message was sent by ${message.author}`)
-        themessage.setFooter('Thanks for using Cindy', message.author.displayAvatarURL())
+        themessage.setFooter('Thanks for using Anime Cafe Bot', message.author.displayAvatarURL())
         member.send(themessage).catch(error => message.channel.send("Couldn't send the message, make sure the user is in the same guild as the bot and user is accepting DM's from the server or has not blocked the bot. This may also be occuring if you're Direct Messaging a bot or Cindy itself. Also this message showing up means that your direct command usage was **unsuccessful**. Try again later i guess?"));
     }
 }

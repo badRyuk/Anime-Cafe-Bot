@@ -13,7 +13,7 @@ module.exports = {
         noperm.setDescription('You lack the permissions required to use this command')
         noperm.addField('You require the ``MANAGE_MESSAGES`` permission in order to use the command.', 'A Permission requirement for the command was set to prevent any kind of unauthorized spam in a server. If you feel this is wrong feel this is wrong or must be changed contact the devs!')
         noperm.setAuthor(message.author.tag, message.author.displayAvatarURL())
-        noperm.setFooter('Thanks for using Cindy!', message.author.displayAvatarURL())
+        noperm.setFooter('Thanks for using Anime Cafe Bot!', message.author.displayAvatarURL())
 
         const nomember = new MessageEmbed()
         nomember.setTitle('No Member/User Mentioned : Command Usage Request Declined')
